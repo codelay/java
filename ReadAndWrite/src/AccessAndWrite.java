@@ -6,6 +6,11 @@ import java.io.RandomAccessFile;
 
 public class AccessAndWrite {
 
+	/**
+	 * @param args
+	 * @throws FileNotFoundException
+	 */
+	
 	public static void main(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub
 		File f = new File("/Users/hyleung/Self/Code/","Test.txt");
@@ -19,10 +24,13 @@ public class AccessAndWrite {
 			{
 				bf[i] = (byte) (bf[i]+12);
 			}
-//			rf.setLength(0);
+//			rf.setLength(0);    
 //			rf.write(bf);
 //			rf.seek(3);
 //			System.out.println((char)rf.read());
+			
+//			RandomAccessFile is linked with bf 
+			
 			
 		}catch(IOException e){
 			System.out.println(e.getMessage());
@@ -41,7 +49,6 @@ public class AccessAndWrite {
 			}
 			
 			rf2.setLength(0);
-			
 			rf2.write(bf1);
 			
 			
